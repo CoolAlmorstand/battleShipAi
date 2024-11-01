@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main-manu</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        .main-flex-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(118, 165, 248);
+          height: 100%;
+          width: 100%;
+          position: relative;
+        }
+        .buttons-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 80%;
+          height: 70%;
+          position: relative;
+          background-color: rgb(230, 230, 230);
+        }
+        
+        .number-of-test-input-field {
+            height: 6%;
+            width: 50%;
+        }
+        
+        .enter-button {
+          height: 10%;
+          width: 50%;
+          background-color: rgb(112, 215, 128);
+          color: rgb(255,255,255);
+          border-color: rgb(0, 0, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-flex-box">
+      <div class="buttons-container">
+        <p> test-algorithm </p>
+        <input class="number-of-test-input-field" id="number-of-test-input-field" type="text" pattern="[0-9]*" min="1" max="1000" name="number of test" required/> 
+        <button class="enter-button" id="enter-button" > run test </button>
+        <p id="progress-text"> progress N/A </p>
+        <p id="avg-shots-text" > avg number of shots: </p>
+        <p id="abg-accuracy" > avg accuracy: </p>
+      </div>
+    </div>
+    <script src="/test-ui/script.js" defer> </script>
+</body>
+</html>

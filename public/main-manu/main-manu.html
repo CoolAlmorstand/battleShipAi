@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main-manu</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        .main-flex-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(118, 165, 248);
+          height: 100%;
+          width: 100%;
+          position: relative;
+        }
+        .buttons-container {
+          display: flex;
+          flex-direction: column;
+          gap: 12%;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          height: 70%;
+          position: relative;
+          background-color: rgb(230, 230, 230);
+        }
+        
+        .main-manu-buttons {
+          height: 10%;
+          width: 50%;
+          background-color: rgb(112, 215, 128);
+          color: rgb(255,255,255);
+          border-color: rgb(0, 0, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-flex-box">
+      <div class="buttons-container">
+        <p> battel ship </p>
+        <button class="main-manu-buttons" id="test-button" > Test </button>
+        <button class="main-manu-buttons" id="debug-board-button" > Debug board</button>
+        <button class="main-manu-buttons" id="play-against-ai-button" > Play against ai </button>
+      </div>
+    </div>
+    <script src="/main-manu/script.js" defer> </script>
+</body>
+</html>
