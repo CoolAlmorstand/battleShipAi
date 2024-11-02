@@ -54,35 +54,34 @@ function removeHighlightButton(){
 function outlineTile(button, board){
 
     if(button == board.moveTile){
-        button.style.backgroundImage = 'url("shared-images/select-water-move-tile.png")'
+        button.style.backgroundImage = 'url("/shared-images/select-water-move-tile.png")'
         return
     }
     
     let col = parseInt(button.id[0])
     let row = parseInt(button.id[1])
 
-    button.style.backgroundImage = `url("shared-images/select-${getImageOfState(board.tiles[col][row].state)}")`
+    button.style.backgroundImage = `url("/shared-images/select-${getImageOfState(board.tiles[col][row].state)}")`
 }
 
 
 function removeTileOutline(button, board){
     
     if(button == board.moveTile){
-        button.style.backgroundImage = 'url("shared-images/water-move-tile.png")'
+        button.style.backgroundImage = 'url("/shared-images/water-move-tile.png")'
         return
     }
     
     let col = parseInt(button.id[0])
     let row = parseInt(button.id[1])
 
-    button.style.backgroundImage = `url("shared-images/${getImageOfState(board.tiles[col][row].state)}")`
+    button.style.backgroundImage = `url("/shared-images/${getImageOfState(board.tiles[col][row].state)}")`
 }
 
 
 export function selectTile(button, board){
-
+    
     if(board.selectedTile != null){
-        console.warn(`selectedTile: ${board.selectedTile.id}`)
         removeTileOutline(board.selectedTile, board)
     }
     
