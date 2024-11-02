@@ -86,8 +86,7 @@ function getVerticalEdges(board, connection){
     let edgeTiles = []
     let startTile = connection.startTile
     let endTile = connection.endTile
-    console.warn(`start tile row ${startTile.row}`)
-    console.warn(`end tile row ${endTile.row}`)
+    
     //check if tile above start tile is valid edge tile
     if(startTile.row > 0 && board.tiles[startTile.col][startTile.row - 1].state == "unknown" ){
         edgeTiles.push(board.tiles[startTile.col][startTile.row - 1])

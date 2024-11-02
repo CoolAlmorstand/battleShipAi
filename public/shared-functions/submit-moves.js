@@ -5,9 +5,9 @@ import {tileClick} from "./tile-click.js"
 async function flashSelectOutile(button){
 
     for (let x = 0; x < 3; x++) {
-        button.style.backgroundImage = "url('shared-images/water-move-tile.png')"
+        button.style.backgroundImage = "url('/shared-images/water-move-tile.png')"
         await new Promise(resolve => setTimeout(resolve, 250))
-        button.style.backgroundImage = "url('shared-images/select-water-move-tile.png')"
+        button.style.backgroundImage = "url('/shared-images/select-water-move-tile.png')"
         await new Promise(resolve => setTimeout(resolve, 250))
     }
 }
@@ -65,7 +65,7 @@ function processResponse(response, board, undoButton){
     }
     
     board.edgeTiles = response.edgeTiles
-    highlightEdgeTiles(board.edgeTiles)
+    //highlightEdgeTiles(board.edgeTiles)
     setAsMoveTile(response, board)
 }
 

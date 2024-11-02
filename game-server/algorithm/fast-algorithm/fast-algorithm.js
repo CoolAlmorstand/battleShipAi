@@ -77,13 +77,11 @@ function main(board){
     let connectedHitTiles = getConnectedHitTiles(board)
     let edgeTiles = []
     //check if theres a hitTile
-    console.warn(`lenghth: ${connectedHitTiles.length}`)
     if(connectedHitTiles.length > 0){
         edgeTiles = hasHitTileAlgo(board, connectedHitTiles)
     }
     //run the algorithms normally 
     else{
-        console.warn("normal")
         normalAlgo(board)
     }
 
